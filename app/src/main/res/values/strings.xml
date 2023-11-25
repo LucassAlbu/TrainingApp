@@ -2,4 +2,9 @@
     <string name="app_name">TrainingApp</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="login_email_hint">Email@Email.com</string>
+    <string name="login_password_hint">******</string>
+    <string name="login_forgot_password_text">Esqueci a senha</string>
+    <string name="login_create_account_text">Não tenho conta</string>
+    <string name="login_login_button">Login</string>
 </resources>
