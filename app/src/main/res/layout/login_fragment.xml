@@ -4,9 +4,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".presentation.auth.LoginFragment"
+    android:background="@drawable/background"
 
-    android:background="@drawable/background">
+    tools:context=".presentation.auth.LoginFragment">
 
     <ImageView
         android:id="@+id/imageView"
@@ -26,18 +26,19 @@
         android:layout_marginStart="16dp"
         android:layout_marginTop="96dp"
         android:layout_marginEnd="16dp"
-        android:textSize="20sp"
         android:background="@drawable/email_input"
-        android:gravity="center_vertical"
         android:hint="@string/login_email_hint"
+        android:maxLines="1"
         android:paddingStart="30dp"
+        android:paddingTop="5dp"
         android:paddingEnd="20dp"
         android:textColor="@color/white"
+        android:textColorHint="@color/cinza1"
+        android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView"
-        tools:text="Email@email.com" />
+        app:layout_constraintTop_toBottomOf="@+id/imageView" />
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/cd_password"
@@ -46,29 +47,36 @@
         android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
         android:layout_marginEnd="16dp"
+        android:defaultFocusHighlightEnabled="false"
+        android:focusedByDefault="false"
+        app:boxStrokeColor="@color/primaria"
         app:boxStrokeWidth="0dp"
+        app:boxStrokeWidthFocused="0dp"
         app:hintEnabled="false"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/edt_email"
         app:passwordToggleEnabled="true"
-        app:passwordToggleTint="@color/primaria"
-        >
+        app:passwordToggleTint="@color/primaria">
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/edt_password"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:background="@drawable/password_input"
+            android:defaultFocusHighlightEnabled="false"
             android:ellipsize="end"
             android:hint="@string/login_password_hint"
             android:inputType="textPassword"
-            tools:text="*******"
-            android:textColor="@color/white"
             android:maxLines="1"
             android:paddingStart="30dp"
             android:paddingEnd="20dp"
-            android:textSize="20sp" />
+            android:singleLine="true"
+            android:textColor="@color/white"
+            android:textColorHint="@color/cinza1"
+            android:textIsSelectable="false"
+            android:textSize="20sp"
+            app:textInputLayoutFocusedRectEnabled="false" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <TextView
@@ -101,17 +109,18 @@
         android:layout_marginStart="16dp"
         android:layout_marginTop="60dp"
         android:layout_marginEnd="16dp"
+        android:backgroundTint="@color/primaria"
         android:insetLeft="0dp"
         android:insetTop="0dp"
         android:insetRight="0dp"
         android:insetBottom="0dp"
+        android:text="@string/login_login_button"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        app:cornerRadius="20dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/cd_password"
-        android:textColor="@color/white"
-        android:backgroundTint="@color/primaria"
-        android:textSize="20sp"
-        android:text="@string/login_login_button"/>
+        app:layout_constraintTop_toBottomOf="@+id/cd_password" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
