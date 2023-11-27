@@ -8,8 +8,9 @@ import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import com.albuquerque.trainingapp.R
 import com.albuquerque.trainingapp.databinding.LoginFragmentBinding
+import dagger.hilt.android.AndroidEntryPoint
 
-
+@AndroidEntryPoint
 class LoginFragment : Fragment() {
 
 
