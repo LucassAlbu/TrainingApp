@@ -10,6 +10,7 @@ import androidx.navigation.fragment.findNavController
 import com.albuquerque.trainingapp.R
 import com.albuquerque.trainingapp.databinding.LoginFragmentBinding
 import com.albuquerque.trainingapp.presentation.MainViewModel
+import com.projetoFirebase.util.showBottomSheet
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
@@ -44,6 +45,8 @@ class LoginFragment : Fragment() {
         }
 
         binding.btnLogin.setOnClickListener {
+            showBottomSheet(message = "teste" )
+
             //TODO implementar quando login firebase estiver implementado
         }
     }

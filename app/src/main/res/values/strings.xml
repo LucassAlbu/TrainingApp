@@ -11,7 +11,9 @@
     <string name="btn_send">Enviar</string>
     <string name="register_fragment_btn_create_account">Criar conta</string>
 
-
+    <!-- comuns  -->
+    <string name="bottom_sheet_tv_warning">Atenção</string>
+    <string name="bottom_sheet_btn_warning">Entendi</string>
 
     <!-- Errors FireBase Authentication-->
     <string name="account_not_registered">Nenhuma conta encontrada com esse E-mail</string>
@@ -20,4 +22,9 @@
     <string name="email_in_use">Estes e-mail já está em uso</string>
     <string name="strong_password">Insira uma senha mais forte</string>
     <string name="error_generic">Ocorreu um erro, por favor tente novamente! </string>
+    <string name="register_fragment_email_invalid_text">E-mail Invalido</string>
+    <string name="register_fragment_email_not_match">E-mails Não conferem</string>
+    <string name="register_fragment_empty_password">Digite uma senha</string>
+    <string name="register_fragment_password_not_match">Senhas não conferem</string>
+    <string name="register_fragment_email_empty">Digite um E-mail</string>
 </resources>

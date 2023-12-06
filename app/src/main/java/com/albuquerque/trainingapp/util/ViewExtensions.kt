@@ -6,6 +6,10 @@ import androidx.core.view.marginBottom
 import androidx.core.view.marginLeft
 import androidx.core.view.marginRight
 import androidx.core.view.marginTop
+import androidx.fragment.app.Fragment
+import com.albuquerque.trainingapp.R
+import com.albuquerque.trainingapp.databinding.BottomSheetBinding
+import com.google.android.material.bottomsheet.BottomSheetDialog
 import java.text.SimpleDateFormat
 import java.util.Locale
 
@@ -61,5 +65,27 @@ fun String.convertDate(): String {
 
     val date = americanInputFormat.parse(this)
     return date.let { brOutputFormat.format(it!!) }
+
+}
+
+fun Fragment.showBottomSheet(
+    titleDialog: String? = null,
+    titleButton: Int? = null,
+    message: String,
+    onClick: () -> Unit = {}
+) {
+    val bottomSheetDialog = BottomSheetDialog(requireContext(), R.style.BottomSheetDialog)
+    val binding: BottomSheetBinding =
+        BottomSheetBinding.inflate(layoutInflater, null, false)
+
+    binding.tvTitle.text = titleDialog
+    binding.tvMessage.text = message
+    binding.btnOk.text = getText(titleButton ?: R.string.bottom_sheet_btn_warning)
+    binding.btnOk.setOnClickListener {
+        onClick()
+        bottomSheetDialog.dismiss()
+    }
+    bottomSheetDialog.setContentView(binding.root)
+    bottomSheetDialog.show()
 
 }

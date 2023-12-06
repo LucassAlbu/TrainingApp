@@ -74,6 +74,7 @@ class MainViewModel @Inject constructor(
                 object : DefaultListenerResponse<FirebaseUser, String> {
                     override fun onSuccess(data: FirebaseUser) {
                         _signUp.postValue(data)
+                        uiStateSignUp.postValue(UIState.AuthSuccess)
                     }
 
                     override fun onError(error: String) {

@@ -1,5 +1,6 @@
 package com.albuquerque.trainingapp.repository
 
+import com.albuquerque.trainingapp.util.FirebaseHelper
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.FirebaseUser
 import com.google.firebase.auth.UserProfileChangeRequest
