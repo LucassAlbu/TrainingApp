@@ -103,18 +103,23 @@
             app:boxStrokeColor="@color/primaria"
             app:boxStrokeWidth="0dp"
             app:boxStrokeWidthFocused="0dp"
+            android:padding="0dp"
             app:hintEnabled="false"
+            android:background="@drawable/password_input"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/tv_email_not_match"
             app:passwordToggleEnabled="true"
+            android:gravity="center_vertical"
             app:passwordToggleTint="@color/primaria">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/edt_password"
+                android:layout_gravity="center"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:background="@drawable/password_input"
+                android:gravity="center_vertical"
+                android:background="@color/transparent"
                 android:defaultFocusHighlightEnabled="false"
                 android:ellipsize="end"
                 android:hint="@string/login_password_hint"
@@ -136,7 +141,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
             android:layout_marginTop="5dp"
-            android:text="@string/register_fragment_empty_password"
+            android:text="@string/empty_password"
             android:textColor="@color/primaria"
             android:textSize="12sp"
             android:visibility="gone"
@@ -217,7 +222,6 @@
             app:layout_constraintTop_toBottomOf="@+id/tv_password_not_match" />
 
         <ProgressBar
-            android:visibility="gone"
             android:id="@+id/loading"
             style="?android:attr/progressBarStyle"
             android:layout_width="wrap_content"
@@ -225,6 +229,7 @@
             android:backgroundTint="@color/primaria"
             android:elevation="10dp"
             android:indeterminateTint="@color/primaria"
+            android:visibility="gone"
             app:layout_constraintBottom_toTopOf="@+id/edt_email"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
