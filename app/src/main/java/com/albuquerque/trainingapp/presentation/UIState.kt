@@ -1,6 +1,6 @@
 package com.albuquerque.trainingapp.presentation
 
-sealed class UIState{
+sealed class UIState {
 
     object Loading : UIState()
     object AuthSuccess : UIState()

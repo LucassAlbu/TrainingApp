@@ -40,7 +40,11 @@
         android:id="@+id/recoverFragment"
         android:name="com.albuquerque.trainingapp.presentation.auth.RecoverFragment"
         android:label="recover_fragment"
-        tools:layout="@layout/recover_fragment" />
+        tools:layout="@layout/recover_fragment" >
+        <action
+            android:id="@+id/action_recoverFragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
+    </fragment>
     <fragment
         android:id="@+id/registerFragment"
         android:name="com.albuquerque.trainingapp.presentation.auth.RegisterFragment"
