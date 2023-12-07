@@ -16,6 +16,12 @@
     <string name="email_empty">Digite um E-mail</string>
     <string name="empty_password">Digite uma senha</string>
 
+    <!-- TabLayout-->
+    <string name="training_fragment">Treinos</string>
+    <string name="historic_fragment">Histórico</string>
+    <string name="instruction_fragment">Intruções</string>
+
+
 
     <!-- Errors FireBase Authentication-->
     <string name="account_not_registered">Nenhuma conta encontrada com esse E-mail</string>

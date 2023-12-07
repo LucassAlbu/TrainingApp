@@ -24,30 +24,24 @@ class SplashFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         _binding = SplashFragmentBinding.inflate(inflater, container, false)
-
-        Handler(Looper.getMainLooper()).postDelayed(
-            { findNavController().navigate(R.id.action_splashFragment_to_loginFragment) },
-            3000
-        )
-
         return binding.root
     }
 
-//    override fun onStart() {
-//        super.onStart()
-//
-//        val currentUser = viewModel.currentUser
-//        if (currentUser != null) {
-//            Handler(Looper.getMainLooper()).postDelayed(
-//                { findNavController().navigate(R.id.action_splashFragment_to_homeFragment) },
-//                3000
-//            )
-//
-//        } else {
-//            Handler(Looper.getMainLooper()).postDelayed(
-//                { findNavController().navigate(R.id.action_splashFragment_to_loginFragment) },
-//                3000
-//            )
-//        }
-//    }
+    override fun onStart() {
+        super.onStart()
+
+        val currentUser = viewModel.currentUser
+        if (currentUser != null) {
+            Handler(Looper.getMainLooper()).postDelayed(
+                { findNavController().navigate(R.id.action_splashFragment_to_homeFragment) },
+                3000
+            )
+
+        } else {
+            Handler(Looper.getMainLooper()).postDelayed(
+                { findNavController().navigate(R.id.action_splashFragment_to_loginFragment) },
+                3000
+            )
+        }
+    }
 }
